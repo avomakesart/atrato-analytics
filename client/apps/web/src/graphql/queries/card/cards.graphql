@@ -1,0 +1,16 @@
+query Cards($limit: Int!, $cursor: String) {
+  cards(limit: $limit, cursor: $cursor) {
+    cards {
+      id
+      cardNumber
+      cardProvider
+      cvv
+      pin
+      expiryDate
+      clientId
+      createdAt
+      updatedAt
+    }
+    hasMore
+  }
+}

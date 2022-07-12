@@ -1,0 +1,890 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  line-height: 1.5;
+  tab-size: 4;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+h1,
+h2,
+p,
+pre {
+  margin: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+}
+
+h1,
+h2 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    Liberation Mono, Courier New, monospace;
+}
+
+svg {
+  display: block;
+  vertical-align: middle;
+  shape-rendering: auto;
+  text-rendering: optimizeLegibility;
+}
+
+pre {
+  background-color: rgba(55, 65, 81, 1);
+  border-radius: 0.25rem;
+  color: rgba(229, 231, 235, 1);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    Liberation Mono, Courier New, monospace;
+  overflow: scroll;
+  padding: 0.5rem 0.75rem;
+}
+
+.shadow {
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.rounded {
+  border-radius: 1.5rem;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  /* max-width: 768px; */
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: rgba(55, 65, 81, 1);
+  width: 100%;
+}
+
+#welcome {
+  margin-top: 2.5rem;
+}
+
+#welcome h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+#welcome span {
+  display: block;
+  font-size: 1.875rem;
+  font-weight: 300;
+  line-height: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+#hero {
+  align-items: center;
+  background-color: hsla(214, 62%, 21%, 1);
+  border: none;
+  box-sizing: border-box;
+  color: rgba(55, 65, 81, 1);
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 3.5rem;
+}
+
+#hero .text-container {
+  color: rgba(255, 255, 255, 1);
+  padding: 3rem 2rem;
+}
+
+#hero .text-container h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  position: relative;
+}
+
+#hero .text-container h2 svg {
+  color: hsla(162, 47%, 50%, 1);
+  height: 2rem;
+  left: -0.25rem;
+  position: absolute;
+  top: 0;
+  width: 2rem;
+}
+
+#hero .text-container h2 span {
+  margin-left: 2.5rem;
+}
+
+#hero .text-container a {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0.75rem;
+  color: rgba(55, 65, 81, 1);
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  text-decoration: inherit;
+}
+
+#hero .logo-container {
+  display: none;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#hero .logo-container svg {
+  color: rgba(255, 255, 255, 1);
+  width: 66.666667%;
+}
+
+#middle-content {
+  align-items: flex-start;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr;
+  margin-top: 3.5rem;
+}
+
+#learning-materials {
+  padding: 2.5rem 2rem;
+}
+
+#learning-materials h2 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+  line-height: 1.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.list-item-link {
+  align-items: center;
+  border-radius: 0.75rem;
+  display: flex;
+  margin-top: 1rem;
+  padding: 1rem;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter,
+    -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  width: 100%;
+}
+
+.list-item-link svg:first-child {
+  margin-right: 1rem;
+  height: 1.5rem;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter,
+    -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  width: 1.5rem;
+}
+
+.list-item-link>span {
+  flex-grow: 1;
+  font-weight: 400;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter,
+    -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.list-item-link>span>span {
+  color: rgba(107, 114, 128, 1);
+  display: block;
+  flex-grow: 1;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1rem;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter,
+    -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.list-item-link svg:last-child {
+  height: 1rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  width: 1rem;
+}
+
+.list-item-link:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: hsla(162, 47%, 50%, 1);
+}
+
+.list-item-link:hover>span {}
+
+.list-item-link:hover>span>span {
+  color: rgba(243, 244, 246, 1);
+}
+
+.list-item-link:hover svg:last-child {
+  transform: translateX(0.25rem);
+}
+
+#other-links {}
+
+.button-pill {
+  padding: 1.5rem 2rem;
+  transition-duration: 300ms;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter,
+    -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+  display: flex;
+}
+
+.button-pill svg {
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter,
+    -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  flex-shrink: 0;
+  width: 3rem;
+}
+
+.button-pill>span {
+  letter-spacing: -0.025em;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.button-pill span span {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+.button-pill:hover svg,
+.button-pill:hover {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+#nx-console:hover {
+  background-color: rgba(0, 122, 204, 1);
+}
+
+#nx-console svg {
+  color: rgba(0, 122, 204, 1);
+}
+
+#nx-repo:hover {
+  background-color: rgba(24, 23, 23, 1);
+}
+
+#nx-repo svg {
+  color: rgba(24, 23, 23, 1);
+}
+
+#nx-cloud {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 2.5rem 2rem;
+}
+
+#nx-cloud>div {
+  align-items: center;
+  display: flex;
+}
+
+#nx-cloud>div svg {
+  border-radius: 0.375rem;
+  flex-shrink: 0;
+  width: 3rem;
+}
+
+#nx-cloud>div h2 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#nx-cloud>div h2 span {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+#nx-cloud p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+
+#nx-cloud pre {
+  margin-top: 1rem;
+}
+
+#nx-cloud a {
+  color: rgba(107, 114, 128, 1);
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+#nx-cloud a:hover {
+  text-decoration: underline;
+}
+
+#commands {
+  padding: 2.5rem 2rem;
+  margin-top: 3.5rem;
+}
+
+#commands h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#commands p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+details {
+  align-items: center;
+  display: flex;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+details pre>span {
+  color: rgba(181, 181, 181, 1);
+  display: block;
+}
+
+summary {
+  border-radius: 0.5rem;
+  display: flex;
+  font-weight: 400;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter,
+    -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+summary:hover {
+  background-color: rgba(243, 244, 246, 1);
+}
+
+summary svg {
+  height: 1.5rem;
+  margin-right: 1rem;
+  width: 1.5rem;
+}
+
+#love {
+  color: rgba(107, 114, 128, 1);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 3.5rem;
+  opacity: 0.6;
+  text-align: center;
+}
+
+#love svg {
+  color: rgba(252, 165, 165, 1);
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline;
+  margin-top: -0.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  #hero {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #hero .logo-container {
+    display: flex;
+  }
+
+  #middle-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+
+:root {
+  /**
+    ** Rings
+    **/
+  --atto-ring-inset: var(--atto-empty,
+      /*!*/
+      /*!*/
+    );
+  --atto-ring-offset-width: 0px;
+  --atto-ring-offset-color: #fff;
+  --atto-ring-color: rgba(66, 153, 225, 0.6);
+  --atto-ring-offset-shadow: 0 0 #0000;
+  --atto-ring-shadow: 0 0 #0000;
+  /**
+    ** Spaces
+    **/
+  --atto-space-1: 0.25rem;
+  --atto-space-2: 0.5rem;
+  --atto-space-3: 0.75rem;
+  --atto-space-4: 1rem;
+  --atto-space-5: 1.25rem;
+  --atto-space-6: 1.5rem;
+  --atto-space-7: 1.75rem;
+  --atto-space-8: 2rem;
+  --atto-space-9: 2.25rem;
+  --atto-space-10: 2.5rem;
+  --atto-space-12: 3rem;
+  --atto-space-14: 3.5rem;
+  --atto-space-16: 4rem;
+  --atto-space-20: 5rem;
+  --atto-space-24: 6rem;
+  --atto-space-28: 7rem;
+  --atto-space-32: 8rem;
+  --atto-space-36: 9rem;
+  --atto-space-40: 10rem;
+  --atto-space-44: 11rem;
+  --atto-space-48: 12rem;
+  --atto-space-52: 13rem;
+  --atto-space-56: 14rem;
+  --atto-space-60: 15rem;
+  --atto-space-64: 16rem;
+  --atto-space-72: 18rem;
+  --atto-space-80: 20rem;
+  --atto-space-96: 24rem;
+  --atto-space-px: 1px;
+  /**
+    ** Shadows
+    **/
+  --atto-shadows-xs: 0px 1px 2pxrgba(16, 24, 40, 0.05);
+  --atto-shadows-sm: 0px 0px 1pxrgba(48, 49, 51, 0.05), 0px 2px 4pxrgba(48, 49, 51, 0.1);
+  --atto-shadows-base: 0 1px 3px 0rgba(0, 0, 0, 0.1), 0 1px 2px 0rgba(0, 0, 0, 0.06);
+  --atto-shadows-md: 0px 0px 1pxrgba(48, 49, 51, 0.05), 0px 4px 8pxrgba(48, 49, 51, 0.1);
+  --atto-shadows-lg: 0px 0px 1pxrgba(48, 49, 51, 0.05), 0px 8px 16pxrgba(48, 49, 51, 0.1);
+  --atto-shadows-xl: 0px 0px 1pxrgba(48, 49, 51, 0.05), 0px 16px 24pxrgba(48, 49, 51, 0.1);
+  --atto-shadows-2xl: 0 25px 50px -12pxrgba(0, 0, 0, 0.25);
+  --atto-shadows-outline: 0 0 0 3pxrgba(66, 153, 225, 0.6);
+  --atto-shadows-inner: inset 0 2px 4px 0rgba(0, 0, 0, 0.06);
+  --atto-shadows-none: none;
+  --atto-shadows-dark-lg: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px;
+  /**
+   ** Sizes
+   **/
+  --atto-sizes-1: 0.25rem;
+  --atto-sizes-2: 0.5rem;
+  --atto-sizes-3: 0.75rem;
+  --atto-sizes-4: 1rem;
+  --atto-sizes-5: 1.25rem;
+  --atto-sizes-6: 1.5rem;
+  --atto-sizes-7: 1.75rem;
+  --atto-sizes-8: 2rem;
+  --atto-sizes-9: 2.25rem;
+  --atto-sizes-10: 2.5rem;
+  --atto-sizes-12: 3rem;
+  --atto-sizes-14: 3.5rem;
+  --atto-sizes-16: 4rem;
+  --atto-sizes-20: 5rem;
+  --atto-sizes-24: 6rem;
+  --atto-sizes-28: 7rem;
+  --atto-sizes-32: 8rem;
+  --atto-sizes-36: 9rem;
+  --atto-sizes-40: 10rem;
+  --atto-sizes-44: 11rem;
+  --atto-sizes-48: 12rem;
+  --atto-sizes-52: 13rem;
+  --atto-sizes-56: 14rem;
+  --atto-sizes-60: 15rem;
+  --atto-sizes-64: 16rem;
+  --atto-sizes-72: 18rem;
+  --atto-sizes-80: 20rem;
+  --atto-sizes-96: 24rem;
+  --atto-sizes-px: 1px;
+  --atto-sizes-0-5: 0.125rem;
+  --atto-sizes-1-5: 0.375rem;
+  --atto-sizes-2-5: 0.625rem;
+  --atto-sizes-3-5: 0.875rem;
+  --atto-sizes-max: max-content;
+  --atto-sizes-min: min-content;
+  --atto-sizes-full: 100%;
+  --atto-sizes-3xs: 14rem;
+  --atto-sizes-2xs: 16rem;
+  --atto-sizes-xs: 20rem;
+  --atto-sizes-sm: 24rem;
+  --atto-sizes-md: 28rem;
+  --atto-sizes-lg: 32rem;
+  --atto-sizes-xl: 36rem;
+  --atto-sizes-2xl: 42rem;
+  --atto-sizes-3xl: 48rem;
+  --atto-sizes-4xl: 56rem;
+  --atto-sizes-5xl: 64rem;
+  --atto-sizes-6xl: 72rem;
+  --atto-sizes-7xl: 80rem;
+  --atto-sizes-8xl: 90rem;
+  --atto-sizes-container-sm: 640px;
+  --atto-sizes-container-md: 768px;
+  --atto-sizes-container-lg: 1024px;
+  --atto-sizes-container-xl: 1280px;
+  /**
+    ** Border radius
+    **/
+  --atto-radii-none: 0;
+  --atto-radii-sm: 0.125rem;
+  --atto-radii-base: 0.25rem;
+  --atto-radii-md: 0.375rem;
+  --atto-radii-lg: 0.5rem;
+  --atto-radii-xl: 0.75rem;
+  --atto-radii-2xl: 1rem;
+  --atto-radii-3xl: 1.5rem;
+  --atto-radii-full: 9999px;
+  /**
+    ** Font sizes
+    **/
+  --atto-fontSizes-xs: 0.75rem;
+  --atto-fontSizes-sm: 0.875rem;
+  --atto-fontSizes-md: 1rem;
+  --atto-fontSizes-lg: 1.125rem;
+  --atto-fontSizes-xl: 1.25rem;
+  --atto-fontSizes-2xl: 1.5rem;
+  --atto-fontSizes-3xl: 1.875rem;
+  --atto-fontSizes-4xl: 2.25rem;
+  --atto-fontSizes-5xl: 3rem;
+  --atto-fontSizes-6xl: 3.75rem;
+  --atto-fontSizes-7xl: 4.5rem;
+  --atto-fontSizes-8xl: 6rem;
+  --atto-fontSizes-9xl: 8rem;
+  /**
+    ** Font weights
+    **/
+  --atto-fontWeights-hairline: 100;
+  --atto-fontWeights-thin: 200;
+  --atto-fontWeights-light: 300;
+  --atto-fontWeights-normal: 400;
+  --atto-fontWeights-medium: 500;
+  --atto-fontWeights-semibold: 600;
+  --atto-fontWeights-bold: 700;
+  --atto-fontWeights-extrabold: 800;
+  --atto-fontWeights-black: 900;
+  /**
+    ** Colors
+    **/
+  --atto-colors-transparent: transparent;
+  --atto-colors-current: currentColor;
+  --atto-colors-black: #000000;
+  --atto-colors-white: #FFFFFF;
+  --atto-colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
+  --atto-colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+  --atto-colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
+  --atto-colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+  --atto-colors-whiteAlpha-400: rgba(255, 255, 255, 0.24);
+  --atto-colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
+  --atto-colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
+  --atto-colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
+  --atto-colors-whiteAlpha-800: rgba(255, 255, 255, 0.8);
+  --atto-colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
+  --atto-colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
+  --atto-colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
+  --atto-colors-blackAlpha-200: rgba(0, 0, 0, 0.08);
+  --atto-colors-blackAlpha-300: rgba(0, 0, 0, 0.16);
+  --atto-colors-blackAlpha-400: rgba(0, 0, 0, 0.24);
+  --atto-colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
+  --atto-colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
+  --atto-colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
+  --atto-colors-blackAlpha-800: rgba(0, 0, 0, 0.8);
+  --atto-colors-blackAlpha-900: rgba(0, 0, 0, 0.92);
+  --atto-colors-grayAlpha-100: #f8f8f8;
+  --atto-colors-grayAlpha-200: #c3c2c0;
+  --atto-colors-gray-50: #F7FAFC;
+  --atto-colors-gray-100: #EDF2F7;
+  --atto-colors-gray-200: #E2E8F0;
+  --atto-colors-gray-300: #CBD5E0;
+  --atto-colors-gray-400: #A0AEC0;
+  --atto-colors-gray-500: #718096;
+  --atto-colors-gray-600: #4A5568;
+  --atto-colors-gray-700: #2D3748;
+  --atto-colors-gray-800: #1A202C;
+  --atto-colors-gray-900: #171923;
+  --atto-colors-red-50: #FFF5F5;
+  --atto-colors-red-100: #FED7D7;
+  --atto-colors-red-200: #FEB2B2;
+  --atto-colors-red-300: #FC8181;
+  --atto-colors-red-400: #F56565;
+  --atto-colors-red-500: #E53E3E;
+  --atto-colors-red-600: #C53030;
+  --atto-colors-red-700: #9B2C2C;
+  --atto-colors-red-800: #822727;
+  --atto-colors-red-900: #63171B;
+  --atto-colors-orange-50: #FFFAF0;
+  --atto-colors-orange-100: #FEEBC8;
+  --atto-colors-orange-200: #FBD38D;
+  --atto-colors-orange-300: #F6AD55;
+  --atto-colors-orange-400: #ED8936;
+  --atto-colors-orange-500: #DD6B20;
+  --atto-colors-orange-600: #C05621;
+  --atto-colors-orange-700: #9C4221;
+  --atto-colors-orange-800: #7B341E;
+  --atto-colors-orange-900: #652B19;
+  --atto-colors-yellow-50: #FFFFF0;
+  --atto-colors-yellow-100: #FEFCBF;
+  --atto-colors-yellow-200: #FAF089;
+  --atto-colors-yellow-300: #F6E05E;
+  --atto-colors-yellow-400: #ECC94B;
+  --atto-colors-yellow-500: #D69E2E;
+  --atto-colors-yellow-600: #B7791F;
+  --atto-colors-yellow-700: #975A16;
+  --atto-colors-yellow-800: #744210;
+  --atto-colors-yellow-900: #5F370E;
+  --atto-colors-green-50: #F0FFF4;
+  --atto-colors-green-100: #C6F6D5;
+  --atto-colors-green-200: #9AE6B4;
+  --atto-colors-green-300: #68D391;
+  --atto-colors-green-400: #48BB78;
+  --atto-colors-green-500: #38A169;
+  --atto-colors-green-600: #2F855A;
+  --atto-colors-green-700: #276749;
+  --atto-colors-green-800: #22543D;
+  --atto-colors-green-900: #1C4532;
+  --atto-colors-teal-50: #E6FFFA;
+  --atto-colors-teal-100: #B2F5EA;
+  --atto-colors-teal-200: #81E6D9;
+  --atto-colors-teal-300: #4FD1C5;
+  --atto-colors-teal-400: #38B2AC;
+  --atto-colors-teal-500: #319795;
+  --atto-colors-teal-600: #2C7A7B;
+  --atto-colors-teal-700: #285E61;
+  --atto-colors-teal-800: #234E52;
+  --atto-colors-teal-900: #1D4044;
+  --atto-colors-blue-50: #ebf8ff;
+  --atto-colors-blue-100: #bee3f8;
+  --atto-colors-blue-200: #90cdf4;
+  --atto-colors-blue-300: #63b3ed;
+  --atto-colors-blue-400: #4299e1;
+  --atto-colors-blue-500: #3182ce;
+  --atto-colors-blue-600: #2b6cb0;
+  --atto-colors-blue-700: #2c5282;
+  --atto-colors-blue-800: #2a4365;
+  --atto-colors-blue-900: #1A365D;
+  --atto-colors-cyan-50: #EDFDFD;
+  --atto-colors-cyan-100: #C4F1F9;
+  --atto-colors-cyan-200: #9DECF9;
+  --atto-colors-cyan-300: #76E4F7;
+  --atto-colors-cyan-400: #0BC5EA;
+  --atto-colors-cyan-500: #00B5D8;
+  --atto-colors-cyan-600: #00A3C4;
+  --atto-colors-cyan-700: #0987A0;
+  --atto-colors-cyan-800: #086F83;
+  --atto-colors-cyan-900: #065666;
+  --atto-colors-purple-50: #FAF5FF;
+  --atto-colors-purple-100: #E9D8FD;
+  --atto-colors-purple-200: #D6BCFA;
+  --atto-colors-purple-300: #B794F4;
+  --atto-colors-purple-400: #9F7AEA;
+  --atto-colors-purple-500: #805AD5;
+  --atto-colors-purple-600: #6B46C1;
+  --atto-colors-purple-700: #553C9A;
+  --atto-colors-purple-800: #44337A;
+  --atto-colors-purple-900: #322659;
+  --atto-colors-pink-50: #FFF5F7;
+  --atto-colors-pink-100: #FED7E2;
+  --atto-colors-pink-200: #FBB6CE;
+  --atto-colors-pink-300: #F687B3;
+  --atto-colors-pink-400: #ED64A6;
+  --atto-colors-pink-500: #D53F8C;
+  --atto-colors-pink-600: #B83280;
+  --atto-colors-pink-700: #97266D;
+  --atto-colors-pink-800: #702459;
+  --atto-colors-pink-900: #521B41;
+  --atto-colors-linkedin-50: #E8F4F9;
+  --atto-colors-linkedin-100: #CFEDFB;
+  --atto-colors-linkedin-200: #9BDAF3;
+  --atto-colors-linkedin-300: #68C7EC;
+  --atto-colors-linkedin-400: #34B3E4;
+  --atto-colors-linkedin-500: #00A0DC;
+  --atto-colors-linkedin-600: #008CC9;
+  --atto-colors-linkedin-700: #0077B5;
+  --atto-colors-linkedin-800: #005E93;
+  --atto-colors-linkedin-900: #004471;
+  --atto-colors-facebook-50: #E8F4F9;
+  --atto-colors-facebook-100: #D9DEE9;
+  --atto-colors-facebook-200: #B7C2DA;
+  --atto-colors-facebook-300: #6482C0;
+  --atto-colors-facebook-400: #4267B2;
+  --atto-colors-facebook-500: #385898;
+  --atto-colors-facebook-600: #314E89;
+  --atto-colors-facebook-700: #29487D;
+  --atto-colors-facebook-800: #223B67;
+  --atto-colors-facebook-900: #1E355B;
+  --atto-colors-messenger-50: #D0E6FF;
+  --atto-colors-messenger-100: #B9DAFF;
+  --atto-colors-messenger-200: #A2CDFF;
+  --atto-colors-messenger-300: #7AB8FF;
+  --atto-colors-messenger-400: #2E90FF;
+  --atto-colors-messenger-500: #0078FF;
+  --atto-colors-messenger-600: #0063D1;
+  --atto-colors-messenger-700: #0052AC;
+  --atto-colors-messenger-800: #003C7E;
+  --atto-colors-messenger-900: #002C5C;
+  --atto-colors-whatsapp-50: #dffeec;
+  --atto-colors-whatsapp-100: #b9f5d0;
+  --atto-colors-whatsapp-200: #90edb3;
+  --atto-colors-whatsapp-300: #65e495;
+  --atto-colors-whatsapp-400: #3cdd78;
+  --atto-colors-whatsapp-500: #22c35e;
+  --atto-colors-whatsapp-600: #179848;
+  --atto-colors-whatsapp-700: #0c6c33;
+  --atto-colors-whatsapp-800: #01421c;
+  --atto-colors-whatsapp-900: #001803;
+  --atto-colors-twitter-50: #E5F4FD;
+  --atto-colors-twitter-100: #C8E9FB;
+  --atto-colors-twitter-200: #A8DCFA;
+  --atto-colors-twitter-300: #83CDF7;
+  --atto-colors-twitter-400: #57BBF5;
+  --atto-colors-twitter-500: #1DA1F2;
+  --atto-colors-twitter-600: #1A94DA;
+  --atto-colors-twitter-700: #1681BF;
+  --atto-colors-twitter-800: #136B9E;
+  --atto-colors-twitter-900: #0D4D71;
+  --atto-colors-telegram-50: #E3F2F9;
+  --atto-colors-telegram-100: #C5E4F3;
+  --atto-colors-telegram-200: #A2D4EC;
+  --atto-colors-telegram-300: #7AC1E4;
+  --atto-colors-telegram-400: #47A9DA;
+  --atto-colors-telegram-500: #0088CC;
+  --atto-colors-telegram-600: #007AB8;
+  --atto-colors-telegram-700: #006BA1;
+  --atto-colors-telegram-800: #005885;
+  --atto-colors-telegram-900: #003F5E;
+  --atto-colors-brand-50: #ebf8ff;
+  --atto-colors-brand-100: #bee3f8;
+  --atto-colors-brand-200: #90cdf4;
+  --atto-colors-brand-300: #63b3ed;
+  --atto-colors-brand-400: #4299e1;
+  --atto-colors-brand-500: #3164d0;
+  --atto-colors-brand-600: #2b6cb0;
+  --atto-colors-brand-700: #2c5282;
+  --atto-colors-brand-800: #2a4365;
+  --atto-colors-brand-900: #1A365D;
+  /**
+    ** Alt Colors
+    **/
+  --atto-colors-bg-canvas: var(--atto-colors-gray-50);
+  --atto-colors-bg-surface: var(--atto-colors-white);
+  --atto-colors-bg-subtle: var(--atto-colors-gray-50);
+  --atto-colors-bg-muted: var(--atto-colors-gray-100);
+  --atto-colors-default: var(--atto-colors-gray-900);
+  --atto-colors-inverted: var(--atto-colors-white);
+  --atto-colors-emphasized: var(--atto-colors-gray-700);
+  --atto-colors-muted: var(--atto-colors-gray-600);
+  --atto-colors-subtle: var(--atto-colors-gray-500);
+  --atto-colors-border: var(--atto-colors-gray-200);
+  --atto-colors-accent: var(--atto-colors-brand-500);
+  --atto-colors-success: var(--atto-colors-green-600);
+  --atto-colors-error: var(--atto-colors-red-600);
+  --atto-colors-bg-accent: var(--atto-colors-brand-600);
+  --atto-colors-bg-accent-subtle: var(--atto-colors-brand-500);
+  --atto-colors-bg-accent-muted: var(--atto-colors-brand-400);
+  --atto-colors-on-accent: var(--atto-colors-white);
+  --atto-colors-on-accent-muted: var(--atto-colors-brand-50);
+  --atto-colors-on-accent-subtle: var(--atto-colors-brand-100);
+  /**
+    ** Transitions
+    +*/
+  --atto-transition-property-common: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  --atto-transition-property-colors: background-color, border-color, color, fill, stroke;
+  --atto-transition-property-dimensions: width, height;
+  --atto-transition-property-position: left, right, top, bottom;
+  --atto-transition-property-background: background-color, background-image, background-position;
+  --atto-transition-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --atto-transition-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --atto-transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --atto-transition-duration-ultra-fast: 50ms;
+  --atto-transition-duration-faster: 100ms;
+  --atto-transition-duration-fast: 150ms;
+  --atto-transition-duration-normal: 200ms;
+  --atto-transition-duration-slow: 300ms;
+  --atto-transition-duration-slower: 400ms;
+  --atto-transition-duration-ultra-slow: 500ms;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  min-height: 100%;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+}

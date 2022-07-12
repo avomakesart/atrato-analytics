@@ -1,0 +1,15 @@
+mutation UpdateClientStatus($id: Int!, $status: String!) {
+  updateClientStatus(id: $id, status: $status) {
+    id
+    firstName
+    secondName
+    lastName
+    secondLastName
+    birthDate
+    status
+    email
+    phone
+    createdAt
+    updatedAt
+  }
+}

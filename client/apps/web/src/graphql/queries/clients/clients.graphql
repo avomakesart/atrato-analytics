@@ -1,0 +1,19 @@
+query Clients($limit: Int!, $cursor: String) {
+  clients(limit: $limit, cursor: $cursor) {
+    clients {
+      id
+      firstName
+      secondName
+      lastName
+      secondLastName
+      birthDate
+      email
+      phone
+      status
+      assignedAnalyst
+      createdAt
+      updatedAt
+    }
+    hasMore
+  }
+}

@@ -1,0 +1,13 @@
+mutation CreateCard($clientId: Float!, $input: CardInput!) {
+  createCard(clientId: $clientId, input: $input) {
+    id
+    cardNumber
+    cardProvider
+    cvv
+    pin
+    expiryDate
+    clientId
+    createdAt
+    updatedAt
+  }
+}

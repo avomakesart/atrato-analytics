@@ -1,0 +1,13 @@
+mutation UpdateCard($id: Int!, $input: CardInput!) {
+  updateCard(id: $id, input: $input) {
+    id
+    cardNumber
+    cardProvider
+    cvv
+    pin
+    expiryDate
+    clientId
+    createdAt
+    updatedAt
+  }
+}

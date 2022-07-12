@@ -1,0 +1,13 @@
+query Card($id: Int!) {
+  card(id: $id) {
+    id
+    cardNumber
+    cardProvider
+    cvv
+    pin
+    clientId
+    expiryDate
+    createdAt
+    updatedAt
+  }
+}

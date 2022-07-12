@@ -1,0 +1,16 @@
+query Client($id: Int!) {
+  client(id: $id) {
+    id
+    firstName
+    secondName
+    lastName
+    secondLastName
+    birthDate
+    email
+    phone
+    status
+    assignedAnalyst
+    createdAt
+    updatedAt
+  }
+}
