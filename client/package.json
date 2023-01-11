@@ -17,7 +17,7 @@
     "apollo-server-express": "^3.9.0",
     "argon2": "^0.28.7",
     "axios": "^0.27.2",
-    "class-validator": "^0.13.2",
+    "class-validator": "^0.14.0",
     "clsx": "^1.2.1",
     "connect-pg-simple": "^7.0.0",
     "connect-redis": "^6.1.3",
