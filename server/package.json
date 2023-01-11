@@ -20,7 +20,7 @@
     "apollo-server": "^3.4.0",
     "apollo-server-express": "^3.6.3",
     "argon2": "^0.28.5",
-    "class-validator": "^0.13.2",
+    "class-validator": "^0.14.0",
     "connect-pg-simple": "^7.0.0",
     "connect-redis": "^6.1.1",
     "cors": "^2.8.5",
